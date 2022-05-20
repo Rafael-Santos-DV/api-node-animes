@@ -11,30 +11,27 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+
     "plugins": [
         "@typescript-eslint"
     ],
     "rules": {
       "camelcase": "off",
-    "no-throw-literal": "off",
-    "import/no-extraneous-dependencies": "off",
-    "semi": "error",
-    "linebreak-style": "off",
-    "no-extra-semi": "off",
-    "@typescript-eslint/no-extra-semi": ["error"],
-    "no-shadow": "off",
-    "no-console": "off",
-    "class-methods-use-this": "off",
-    "consistent-return": "off",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "ts": "never",
-        "mjs": "never"
-      }
-   ]
+      "max-len": "off",
+      "no-throw-literal": "off",
+      "import/prefer-default-export": "off",
+      "import/no-extraneous-dependencies": "off",
+      "semi": "error",
+      "linebreak-style": "off",
+      "no-extra-semi": "off",
+      "@typescript-eslint/no-extra-semi": ["error"],
+      "no-shadow": "off",
+      "no-console": "off",
+      "class-methods-use-this": "off",
+      "consistent-return": "off",
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+      "no-unused-vars": "off"
     }
 }
 
