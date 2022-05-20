@@ -3,6 +3,6 @@ import ControllersCrudAnimes from '../Controllers/ControllersCrudAnimes';
 
 const Routes = Router();
 
-Routes.get('/', ControllersCrudAnimes.get);
+Routes.post('/createNewAnime', ControllersCrudAnimes.CreateNewAnimeData);
 
 export default Routes;
