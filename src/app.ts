@@ -5,6 +5,7 @@ import origin from './Middlewares/RulesOrigin';
 import InitMongoose from './Database/AnimesMongodb';
 
 const App = Express();
+
 InitMongoose();
 App.use(Express.json());
 App.use(cors(/* { origin  } */));

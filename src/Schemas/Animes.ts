@@ -6,6 +6,14 @@ const SchemaAnime = new mongoose.Schema<AnimesType>({
     type: String,
     required: true,
   },
+  gender: {
+    type: [String],
+    required: true,
+  },
+  likes: {
+    type: Number,
+    required: false,
+  },
   poster: {
     type: String,
     required: true,
