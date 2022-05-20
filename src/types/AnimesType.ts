@@ -12,5 +12,5 @@ export type AnimesType = {
   animeId: string;
   quant: number;
   description: string;
-  espisodes: TypeEp[];
+  episodes: TypeEp[];
 }

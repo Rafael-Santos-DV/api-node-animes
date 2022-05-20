@@ -12,7 +12,7 @@ const SchemaAnime = new mongoose.Schema<AnimesType>({
   },
   likes: {
     type: Number,
-    required: false,
+    required: true,
   },
   poster: {
     type: String,
@@ -35,7 +35,7 @@ const SchemaAnime = new mongoose.Schema<AnimesType>({
     type: String,
     required: true,
   },
-  espisodes: [
+  episodes: [
     {
       url: {
         type: String,
