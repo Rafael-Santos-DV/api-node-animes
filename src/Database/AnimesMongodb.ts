@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+import 'dotenv/config';
 
 const InitMongoose = () => {
-  mongoose.connect('mongodb://localhost:27017/animes', (error) => {
+  mongoose.connect(process.env.URL_MONGODB || '', (error) => {
     if (error) {
       throw new Error('connect error');
     }

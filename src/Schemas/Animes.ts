@@ -18,6 +18,10 @@ const SchemaAnime = new mongoose.Schema<AnimesType>({
     type: String,
     required: true,
   },
+  episodePoster: {
+    type: String,
+    required: true,
+  },
   animeId: {
     type: String,
     required: true,

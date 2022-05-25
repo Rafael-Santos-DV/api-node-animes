@@ -6,6 +6,7 @@ type TypeEp = {
 export type AnimesType = {
   anime: string;
   poster: string;
+  episodePoster: string;
   likes?: number;
   gender: Array<string>;
   ano: number;
