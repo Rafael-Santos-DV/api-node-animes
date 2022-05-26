@@ -47,7 +47,7 @@ class ControllerCrudAnimes {
   }
 
   async GetShowAnime(req: Request, res: Response) {
-    const { animeId } = req.body;
+    const { animeId } = req.params;
 
     try {
       const response = await Animes.findOne({ animeId });
