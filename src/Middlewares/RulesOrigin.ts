@@ -1,7 +1,7 @@
 type StaticOrigin = boolean | string | RegExp | (boolean | string | RegExp)[];
 type TypeCallback = (err: Error | null, origin?: StaticOrigin) => void;
 
-const domainsPermissions = [''];
+const domainsPermissions = [process.env.ORIGIN_URL];
 
 function origin(origin: string | undefined, callback: TypeCallback) {
   console.log(origin);

@@ -11,7 +11,7 @@ InitMongoose();
 App.use(Express.json());
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({ extended: false }));
-App.use(cors(/* { origin  } */));
+App.use(cors({ origin }));
 App.use(Routes);
 
 export default App;
