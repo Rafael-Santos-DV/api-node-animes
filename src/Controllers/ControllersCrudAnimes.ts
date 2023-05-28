@@ -1,13 +1,21 @@
-import { v4 as uuidv4 } from 'uuid';
-import * as yup from 'yup';
-import { Request, Response } from 'express';
-import Animes from '../Schemas/Animes';
-import { AnimesType } from '../types/AnimesType';
+import { v4 as uuidv4 } from "uuid";
+import * as yup from "yup";
+import { Request, Response } from "express";
+import Animes from "../Schemas/Animes";
+import { AnimesType } from "../types/AnimesType";
 
 class ControllerCrudAnimes {
   async CreateNewAnimeData(req: Request, res: Response) {
     const {
-      anime, ano, description, likes, poster, quant, episodes, gender, episodePoster,
+      anime,
+      ano,
+      description,
+      likes,
+      poster,
+      quant,
+      episodes,
+      gender,
+      episodePoster,
     } = req.body as AnimesType;
     const schemaYup = yup.object({
       anime: yup.string().required(),
@@ -34,15 +42,15 @@ class ControllerCrudAnimes {
     };
 
     if (!(await schemaYup.isValid(newBody))) {
-      return res.status(400).json({ error: 'Error on valid schema' });
+      return res.status(400).json({ error: "Error on valid schema" });
     }
     newBody.animeId = uuidv4();
 
     try {
       await Animes.create(newBody);
-      return res.status(200).json({ sucess: 'Created with sucess' });
+      return res.status(200).json({ sucess: "Created with sucess" });
     } catch (err) {
-      return res.status(404).json({ error: 'Error internal server' });
+      return res.status(404).json({ error: "Error internal server" });
     }
   }
 
@@ -53,12 +61,12 @@ class ControllerCrudAnimes {
       const response = await Animes.findOne({ animeId });
 
       if (!response) {
-        return res.status(404).json({ anime: 'anime not found' });
+        return res.status(404).json({ anime: "anime not found" });
       }
 
       return res.json(response);
     } catch (err) {
-      return res.status(400).json({ error: 'Internal server error' });
+      return res.status(400).json({ error: "Internal server error" });
     }
   }
 
@@ -67,13 +75,17 @@ class ControllerCrudAnimes {
       const response = await Animes.find();
 
       if (!response) {
-        return res.status(404).json({ anime: 'anime not found' });
+        return res.status(404).json({ anime: "anime not found" });
       }
 
       return res.json(response);
     } catch (err) {
-      return res.status(400).json({ error: 'Internal server error' });
+      return res.status(400).json({ error: "Internal server error" });
     }
+  }
+
+  async Home(req: Request, res: Response) {
+    return res.json();
   }
 }
 

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/Server/server.ts",
     "start": "node dist/app.js",
-    "build": "rimraf dist && tsc"
+    "build:dev": "rimraf dist && tsc",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
