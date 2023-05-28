@@ -1,9 +1,9 @@
-import Express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import Routes from './Routes/Routes';
-import origin from './Middlewares/RulesOrigin';
-import InitMongoose from './Database/AnimesMongodb';
+import Express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import Routes from "./Routes/Routes";
+import origin from "./Middlewares/RulesOrigin";
+import InitMongoose from "./Database/AnimesMongodb";
 
 const App = Express();
 
