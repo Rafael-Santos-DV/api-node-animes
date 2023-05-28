@@ -100,7 +100,7 @@ var ControllerCrudAnimes = /** @class */ (function () {
                         return [4 /*yield*/, schemaYup.isValid(newBody)];
                     case 1:
                         if (!(_b.sent())) {
-                            return [2 /*return*/, res.status(400).json({ error: 'Error on valid schema' })];
+                            return [2 /*return*/, res.status(400).json({ error: "Error on valid schema" })];
                         }
                         newBody.animeId = (0, uuid_1.v4)();
                         _b.label = 2;
@@ -109,10 +109,10 @@ var ControllerCrudAnimes = /** @class */ (function () {
                         return [4 /*yield*/, Animes_1["default"].create(newBody)];
                     case 3:
                         _b.sent();
-                        return [2 /*return*/, res.status(200).json({ sucess: 'Created with sucess' })];
+                        return [2 /*return*/, res.status(200).json({ sucess: "Created with sucess" })];
                     case 4:
                         err_1 = _b.sent();
-                        return [2 /*return*/, res.status(404).json({ error: 'Error internal server' })];
+                        return [2 /*return*/, res.status(404).json({ error: "Error internal server" })];
                     case 5: return [2 /*return*/];
                 }
             });
@@ -132,12 +132,12 @@ var ControllerCrudAnimes = /** @class */ (function () {
                     case 2:
                         response = _a.sent();
                         if (!response) {
-                            return [2 /*return*/, res.status(404).json({ anime: 'anime not found' })];
+                            return [2 /*return*/, res.status(404).json({ anime: "anime not found" })];
                         }
                         return [2 /*return*/, res.json(response)];
                     case 3:
                         err_2 = _a.sent();
-                        return [2 /*return*/, res.status(400).json({ error: 'Internal server error' })];
+                        return [2 /*return*/, res.status(400).json({ error: "Internal server error" })];
                     case 4: return [2 /*return*/];
                 }
             });
@@ -154,14 +154,21 @@ var ControllerCrudAnimes = /** @class */ (function () {
                     case 1:
                         response = _a.sent();
                         if (!response) {
-                            return [2 /*return*/, res.status(404).json({ anime: 'anime not found' })];
+                            return [2 /*return*/, res.status(404).json({ anime: "anime not found" })];
                         }
                         return [2 /*return*/, res.json(response)];
                     case 2:
                         err_3 = _a.sent();
-                        return [2 /*return*/, res.status(400).json({ error: 'Internal server error' })];
+                        return [2 /*return*/, res.status(400).json({ error: "Internal server error" })];
                     case 3: return [2 /*return*/];
                 }
+            });
+        });
+    };
+    ControllerCrudAnimes.prototype.Home = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, res.json()];
             });
         });
     };

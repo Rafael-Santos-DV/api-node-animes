@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/Server/server.ts",
-    "start": "node dist/app.js",
+    "start": "node dist//Server/server.js",
     "build:dev": "rimraf dist && tsc",
     "build": "tsc"
   },
